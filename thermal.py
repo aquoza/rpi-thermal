@@ -349,5 +349,5 @@ while(cap.isOpened()):
 		if keyPress == ord('q'):
 			break
 			capture.release()
-			cv2.destroyAllWindows()
+			# cv2.destroyAllWindows()
 		
