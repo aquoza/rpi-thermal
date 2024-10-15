@@ -86,6 +86,7 @@ def rec():
 	return(videoOut)
 
 def snapshot(heatmap):
+	print("hello")
 	#I would put colons in here, but it Win throws a fit if you try and open them!
 	now = time.strftime("%Y%m%d-%H%M%S") 
 	snaptime = time.strftime("%H:%M:%S")
