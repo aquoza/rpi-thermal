@@ -94,11 +94,12 @@ def snapshot(heatmap):
  
 
 while(cap.isOpened()):
-	print("hello")
+	
 	# Capture frame-by-frame
 	ret, frame = cap.read()
 	if ret == True:
 		imdata,thdata = np.array_split(frame, 2)
+		print(imdata)
 		#now parse the data from the bottom frame and convert to temp!
 		#https://www.eevblog.com/forum/thermal-imaging/infiray-and-their-p2-pro-discussion/200/
 		#Huge props to LeoDJ for figuring out how the data is stored and how to compute temp from it.
