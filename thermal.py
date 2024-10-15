@@ -99,7 +99,6 @@ while(cap.isOpened()):
 	ret, frame = cap.read()
 	if ret == True:
 		imdata,thdata = np.array_split(frame, 2)
-		print(imdata)
 		#now parse the data from the bottom frame and convert to temp!
 		#https://www.eevblog.com/forum/thermal-imaging/infiray-and-their-p2-pro-discussion/200/
 		#Huge props to LeoDJ for figuring out how the data is stored and how to compute temp from it.
@@ -265,12 +264,14 @@ while(cap.isOpened()):
 
 		#display image
 		#cv2.imshow('Thermal',heatmap)
-
+        
 		if recording == True:
 			elapsed = (time.time() - start)
 			elapsed = time.strftime("%H:%M:%S", time.gmtime(elapsed)) 
 			#print(elapsed)
 			videoOut.write(heatmap)
+			
+		snaptime = snapshot(heatmap)
 		
 		keyPress = cv2.waitKey(1)
 		if keyPress == ord('a'): #Increase blur radius
