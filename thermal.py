@@ -23,7 +23,7 @@ print('r t: Record and Stop')
 print('p : Snapshot')
 print('m : Cycle through ColorMaps')
 print('h : Toggle HUD')
-#hi
+
 import cv2
 import numpy as np
 import argparse
@@ -60,7 +60,7 @@ if isPi == True:
 else:
 	cap.set(cv2.CAP_PROP_CONVERT_RGB, False)
 
-#256x192 General settings
+#256x192 General settings	
 width = 256 #Sensor width
 height = 192 #sensor height
 scale = 3 #scale multiplier
@@ -89,7 +89,8 @@ def snapshot(heatmap):
 	#I would put colons in here, but it Win throws a fit if you try and open them!
 	now = time.strftime("%Y%m%d-%H%M%S") 
 	snaptime = time.strftime("%H:%M:%S")
-	cv2.imwrite("TC001"+now+".png", heatmap)
+	#cv2.imwrite("TC001"+now+".png", heatmap)
+	cv2.imwrite("1.png", heatmap)
 	return snaptime
  
 
