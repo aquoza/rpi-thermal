@@ -90,7 +90,8 @@ def snapshot(heatmap):
 	now = time.strftime("%Y%m%d-%H%M%S") 
 	snaptime = time.strftime("%H:%M:%S")
 	#cv2.imwrite("TC001"+now+".png", heatmap)
-	cv2.imwrite("1.png", heatmap)
+	image = cv2.rotate(heatmap, cv2.ROTATE_270)
+	cv2.imwrite("1.png", image)
 	return snaptime
  
 
