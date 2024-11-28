@@ -29,6 +29,7 @@ import numpy as np
 import argparse
 import time
 import io
+import time
 
 #We need to know if we are running on the Pi, because openCV behaves a little oddly on all the builds!
 #https://raspberrypi.stackexchange.com/questions/5100/detect-that-a-python-program-is-running-on-the-pi
@@ -93,6 +94,7 @@ def snapshot(heatmap):
 	heatmap = cv2.rotate(heatmap, cv2.ROTATE_90_COUNTERCLOCKWISE)
 	cv2.imwrite("1.png", heatmap)
 	print("image written")
+	time.sleep(0.5)
 	return snaptime
  
 
