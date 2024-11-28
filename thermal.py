@@ -23,7 +23,7 @@ print('r t: Record and Stop')
 print('p : Snapshot')
 print('m : Cycle through ColorMaps')
 print('h : Toggle HUD')
-
+#hi
 import cv2
 import numpy as np
 import argparse
