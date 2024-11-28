@@ -92,6 +92,7 @@ def snapshot(heatmap):
 	#cv2.imwrite("TC001"+now+".png", heatmap)
 	heatmap = cv2.rotate(heatmap, cv2.ROTATE_90_COUNTERCLOCKWISE)
 	cv2.imwrite("1.png", heatmap)
+	print("image written")
 	return snaptime
  
 
