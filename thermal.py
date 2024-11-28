@@ -51,7 +51,7 @@ else:
 	dev = 0
 	
 #init video
-cap = 1('/dev/video'+str(dev), cv2.CAP_V4L)
+cap = cv2.VideoCapture('/dev/video'+str(dev), cv2.CAP_V4L)
 #cap = cv2.VideoCapture(0)
 #pull in the video but do NOT automatically convert to RGB, else it breaks the temperature data!
 #https://stackoverflow.com/questions/63108721/opencv-setting-videocap-property-to-cap-prop-convert-rgb-generates-weird-boolean
