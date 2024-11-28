@@ -89,8 +89,8 @@ def snapshot(heatmap):
 	#I would put colons in here, but it Win throws a fit if you try and open them!
 	now = time.strftime("%Y%m%d-%H%M%S") 
 	snaptime = time.strftime("%H:%M:%S")
-	#cv2.imwrite("TC001"+now+".png", heatmap)
-	image = cv2.rotate(heatmap, cv2.ROTATE_90)
+	cv2.imwrite("TC001"+now+".png", heatmap)
+	image = cv2.rotate(src, cv2.ROTATE_90_CLOCKWISE)
 	cv2.imwrite("1.png", image)
 	return snaptime
  
